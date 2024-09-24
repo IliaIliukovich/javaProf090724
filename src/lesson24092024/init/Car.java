@@ -1,4 +1,4 @@
-package lesson24092024;
+package lesson24092024.init;
 
 public class Car {
 
@@ -28,6 +28,10 @@ public class Car {
 
     public void displayCarInfo() {
         System.out.println("Current car colour: " + colour);
+    }
+
+    public void wash(){
+        System.out.println("Washing the " + colour + " car");
     }
 
 

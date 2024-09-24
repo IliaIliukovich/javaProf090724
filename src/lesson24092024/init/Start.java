@@ -1,4 +1,4 @@
-package lesson24092024;
+package lesson24092024.init;
 
 public class Start {
 
