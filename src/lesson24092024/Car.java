@@ -2,7 +2,7 @@ package lesson24092024;
 
 public class Car {
 
-    public static int carCount = 0;
+    public static int carCount;
 
     private String colour;
 
@@ -11,7 +11,13 @@ public class Car {
         colour = "Default colour";
     }
 
+    static {
+        System.out.println("Static bloc init");
+        carCount = 0;
+    }
+
     public Car(String colour) {
+        System.out.println("Constructor at work");
         carCount++;
         this.colour = colour;
     }
