@@ -1,4 +1,4 @@
-package lesson24092024.inheritance;
+package lesson20240924.inheritance;
 
 public class Cat extends Animal {
 

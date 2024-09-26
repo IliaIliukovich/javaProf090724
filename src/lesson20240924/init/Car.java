@@ -1,4 +1,4 @@
-package lesson24092024.init;
+package lesson20240924.init;
 
 public class Car {
 

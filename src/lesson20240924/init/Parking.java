@@ -1,4 +1,4 @@
-package lesson24092024.init;
+package lesson20240924.init;
 
 public class Parking {
 
@@ -17,8 +17,8 @@ public class Parking {
         // 4 non-static block init
         // 5 constructor works
 
-        Car[] carsAtTheParikng = new Car[] {whiteCar, yellowCar};
-        washCars(carsAtTheParikng);
+        Car[] carsAtTheParking = new Car[] {whiteCar, yellowCar};
+        washCars(carsAtTheParking);
     }
 
     private static void washCars(Car[] cars) {
