@@ -14,7 +14,7 @@ public class Dog extends Animal {
     @Override
     public void introduce() {
         gav();
-        super.introduce();
+        System.out.println("Hello! I'm dog. My name is " + getName());
     }
 
 }

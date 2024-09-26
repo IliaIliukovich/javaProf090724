@@ -11,6 +11,21 @@ public class House {
 
         cat.introduce();
         dog.introduce();
+
+        Animal animal = new Dog("Dog", 2);
+        animal.introduce();
+        animal = new Cat("Cat", 1);
+        animal.introduce();
+
+        Human human = new Human("Peter");
+        System.out.println(cat);
+        System.out.println(dog);
+        System.out.println(animal);
+
+        human.feedAnimals(cat, dog, animal);
+        System.out.println(cat);
+        System.out.println(dog);
+        System.out.println(animal);
     }
 
 }

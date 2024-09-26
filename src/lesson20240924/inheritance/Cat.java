@@ -13,8 +13,7 @@ public class Cat extends Animal {
     @Override
     public void introduce() {
         meow();
-//        System.out.println("Hello! I'm cat");
-        super.introduce();
+        System.out.println("Hello! I'm cat. My name is " + getName());
     }
 
 }
