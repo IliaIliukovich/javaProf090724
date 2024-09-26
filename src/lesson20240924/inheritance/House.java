@@ -6,8 +6,8 @@ public class House {
         Cat cat = new Cat("Tom", 2);
         Dog dog = new Dog("Maks", 1);
 
-//        cat.meow();
-//        dog.gav();
+        cat.meow();
+        dog.gav();
 
         cat.introduce();
         dog.introduce();
