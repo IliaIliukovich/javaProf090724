@@ -33,7 +33,7 @@ Superhero имеет собственную силу, доспехи и оруж
 3. В методе main() класса SuperheroBattle создать несколько Superhero и EvilCreature,
 вывести в консоль их состояние.
 4. В класс Character добавить методы abstract countForce(),	abstract countProtection(),	fight().
-Метод fight() должен быть реализован с применением абстрактных методов countForce(), countProtectionLevel().
+Метод fight() должен быть реализован с применением абстрактных методов countForce(), countProtection().
 При сражении побеждает персонаж, чья сила оказалась больше.
 У проигравшего персонажа отнимается здоровье пропорционально разнице сил и обратно пропорционально его защите
 fight()  ----> health =  health - (force1 - force2) / level
