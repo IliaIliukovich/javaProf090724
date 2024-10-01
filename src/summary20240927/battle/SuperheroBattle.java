@@ -1,0 +1,23 @@
+package summary20240927.battle;
+
+public class SuperheroBattle {
+
+    // Main logic of the battle game
+    public static void main(String[] args) {
+        Weapon sword = new Weapon("Sword", 15);
+        Protection armour = new Protection("Armour", 4);
+        Superhero spiderman = new Superhero("Spiderman", 2, sword, armour);
+
+        EvilCreature zombie = new EvilCreature("Zombie", 5, 1);
+
+        spiderman.introduce();
+        zombie.introduce();
+
+        spiderman.fight(zombie);
+        System.out.println("After fight:");
+        System.out.println(spiderman);
+        System.out.println(zombie);
+    }
+
+
+}
