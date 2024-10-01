@@ -13,7 +13,10 @@ public class SuperheroBattle {
         spiderman.introduce();
         zombie.introduce();
 
-        spiderman.fight(zombie);
+        spiderman.fight(zombie); // method on the object call
+//        zombie.fight(spiderman);
+//        Util.fight(spiderman, zombie); // static method in Util class
+
         System.out.println("After fight:");
         System.out.println(spiderman);
         System.out.println(zombie);

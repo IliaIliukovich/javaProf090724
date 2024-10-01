@@ -10,7 +10,7 @@ public class AutoBoxingUnboxing {
         number2 = (Integer) number; // int ---> Integer boxing
 
         number = number2; // Integer ---> int autounboxing
-        number = (int) number2; // Integer ---> int autounboxing
+        number = (int) number2; // Integer ---> int unboxing
 
         operation(number);
         operation(number2);

@@ -1,6 +1,6 @@
 package summary20240927.battle;
 
-public class EvilCreature extends Character {
+public final class EvilCreature extends Character {
 
     private int force;
 
@@ -29,4 +29,9 @@ public class EvilCreature extends Character {
                 ", force=" + force +
                 ", protection=" + protection;
     }
+
+//    @Override
+//    public void fight(Character another) {
+//        System.out.println("Custom logic for evil creature");
+//    }
 }
