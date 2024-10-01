@@ -31,6 +31,7 @@ public class Box {
             return false;
         }
         Box anotherBox = (Box) another;
+//        another = (Object) anotherBox;
         return Objects.equals(this.cat, anotherBox.cat);
     }
 
