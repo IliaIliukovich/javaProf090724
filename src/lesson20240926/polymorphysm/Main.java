@@ -5,18 +5,20 @@ import java.util.Objects;
 public class Main {
 
     public static void main(String[] args) {
-//        Integer i;
-//        i = 10;
+        System.out.println(args[0]);
+        Integer i;
+        i = 10;
 
-//        Parent link;
-//
-//        boolean condition = false;
-//        if (condition) {
-//            link = new Parent();
-//        } else {
-//            link = new Child();
-//        }
-//        link.method();
+        Parent link;
+
+        boolean condition = Boolean.parseBoolean(args[0]);
+        System.out.println(condition);
+        if (condition) {
+            link = new Parent();
+        } else {
+            link = new Child();
+        }
+        link.method();
 
 
         Object object = "string";
