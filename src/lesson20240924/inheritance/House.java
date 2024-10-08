@@ -26,6 +26,30 @@ public class House {
         System.out.println(cat);
         System.out.println(dog);
         System.out.println(animal);
+
+        human.walk(dog);
+        System.out.println(dog);
+
+        human.play(cat);
+        cat.play(dog);
+        dog.play(cat);
+
+        cat.play(animal);
+
+//        cat.play(cat);
+
+//        method();
+
+        cat.catchMouse();
+
+        Robot robot = new Robot("Vacuum cleaner", 1, "2.0");
+        robot.introduce();
+        robot.walk(cat);
+        robot.catchMouse();
+    }
+
+    public static void method() {
+        method();
     }
 
 }

@@ -1,11 +1,16 @@
 package lesson20240924.inheritance;
 
-public class Human {
+import lesson20240924.inheritance.interfaces.Walkable;
 
-    private String name;
+public class Human extends Creature implements Walkable {
 
     public Human(String name) {
-        this.name = name;
+        super(name);
+    }
+
+    @Override
+    public void introduce() {
+        System.out.println("Hello! I'm human. My name is " + super.getName());
     }
 
     public void feedAnimal(Animal animal) {
@@ -17,6 +22,12 @@ public class Human {
         for (Animal a : animals) {
             feedAnimal(a);
         }
+    }
+
+    @Override
+    public void walk(Animal animal) {
+        System.out.println("Human walks with " + animal.getName());
+        animal.setHungry(true);
     }
 
 }
