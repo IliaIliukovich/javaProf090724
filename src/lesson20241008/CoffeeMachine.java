@@ -29,12 +29,17 @@ public class CoffeeMachine {
 
     public static void main(String[] args) {
         CoffeeMachine machine = new CoffeeMachine();
+        machine.displayInfo(Coffee.LATTE);
         machine.makeCoffee(Coffee.LATTE, 70);
         machine.makeCoffee(Coffee.LATTE, 50);
         int moneyBack = machine.getMoneyBack();
 
         CoffeeMachine machine2 = new CoffeeMachine();
         machine2.makeCoffee(Coffee.AMERICANO, 70);
+    }
+
+    public void displayInfo(Coffee coffee) {
+        System.out.println("Welcome! Info about the chosen coffee: " + coffee);
     }
 
     public void makeCoffee(Coffee coffee, int money) {
