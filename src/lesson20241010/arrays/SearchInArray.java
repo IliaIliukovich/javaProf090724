@@ -14,12 +14,13 @@ public class SearchInArray {
         System.out.println(searchLinear(sortedInts, 9));
 
         System.out.println(Arrays.binarySearch(sortedInts, 9));
-        // sort -- n^2
-        // n * log n --- quickSort, mergeSort
+
+        // плохие алгоритмы сортировки -- n^2
+        // хорошие алгоритмы сортировки -- n * log n --- quickSort, mergeSort
         Arrays.sort(ints); // quickSort -- неустойчивый
 
         String[] strings = {"A", "D", "C"};
-        Arrays.sort(strings); // mergeSort -- устойчивая
+        Arrays.sort(strings); // mergeSort -- устойчивый
 
     }
 
