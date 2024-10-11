@@ -1,0 +1,15 @@
+Cat
+ - String name
+ - int age
+ - String colour
+
+Box
+ - String name
+ - boolean canBeSold
+ - int count
+ - Cat cat
+
+ В классе Box:
+ - empty()
+ - makeCopy() -- shallow copy
+ - deepCopy()
