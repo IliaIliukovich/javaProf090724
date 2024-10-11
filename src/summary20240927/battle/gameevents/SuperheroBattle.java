@@ -1,4 +1,9 @@
-package summary20240927.battle;
+package summary20240927.battle.gameevents;
+
+import summary20240927.battle.creatures.EvilCreature;
+import summary20240927.battle.creatures.Superhero;
+import summary20240927.battle.items.Protection;
+import summary20240927.battle.items.Weapon;
 
 public class SuperheroBattle {
 

@@ -1,4 +1,7 @@
-package summary20240927.battle;
+package summary20240927.battle.creatures;
+
+import summary20240927.battle.items.Protection;
+import summary20240927.battle.items.Weapon;
 
 public class Superhero extends Character {
 

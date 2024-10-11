@@ -1,4 +1,4 @@
-package summary20240927.battle;
+package summary20240927.battle.creatures;
 
 public abstract class Character {
 
