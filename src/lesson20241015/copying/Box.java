@@ -1,4 +1,4 @@
-package lesson20241015;
+package lesson20241015.copying;
 
 public class Box implements Cloneable {
 
