@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class School {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         Subject subject = Subject.MATH;
         System.out.println(Subject.LITERATURE == subject);
 
@@ -24,6 +24,18 @@ public class School {
         System.out.println(student1.knows(Subject.HISTORY));
         System.out.println(student1.knows(Subject.MATH));
         System.out.println(student1.knows(Subject.LITERATURE));
+//
+        student1.learn(Subject.MATH);
+
+        // Deep copy
+        Student student5 = (Student) student1.clone();
+
+        // Shallow copy
+//        Student student5 = student1;
+        student5.learn(Subject.HISTORY);
+
+        System.out.println(student1);
+        System.out.println(student5);
     }
 
 }
