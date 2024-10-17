@@ -17,11 +17,11 @@ public class MyArrayList implements Iterable<String> {
 
     @Override
     public Iterator<String> iterator() {
-        return new MyIterator();
+        return new MyReverseIterator();
     }
 
 
-    public class MyIterator implements Iterator<String> {
+    private class MyIterator implements Iterator<String> {
 
         private int index = 0;
         @Override
@@ -35,6 +35,18 @@ public class MyArrayList implements Iterable<String> {
                 throw new NoSuchElementException();
             }
             return data[index++];
+        }
+    }
+
+    private class MyReverseIterator implements Iterator<String> {
+        @Override
+        public boolean hasNext() {
+            return false;
+        }
+
+        @Override
+        public String next() {
+            return null;
         }
     }
 
