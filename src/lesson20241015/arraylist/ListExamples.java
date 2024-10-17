@@ -1,12 +1,14 @@
 package lesson20241015.arraylist;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ListExamples {
 
     public static void main(String[] args) {
         List<String> list = new ArrayList<>(); // <String>
+        List<String> listVersion2 = new LinkedList<>();
         list.add("A");
         list.add("B");
         list.add("C");
