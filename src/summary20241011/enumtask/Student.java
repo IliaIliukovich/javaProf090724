@@ -2,7 +2,7 @@ package summary20241011.enumtask;
 
 import java.util.Arrays;
 
-public class Student {
+public class Student implements Cloneable {
 
     private String name;
 
@@ -35,5 +35,15 @@ public class Student {
                 "name='" + name + '\'' +
                 ", subjects=" + Arrays.toString(subjects) +
                 '}';
+
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Student copy = (Student) super.clone();
+        copy.subjects = subjects.clone();
+
+        return copy;
+
     }
 }
