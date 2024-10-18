@@ -7,7 +7,7 @@ public class Box {
 Реализовать для него итератор.
 
 2. Имеется класс RectangleArrayList, данные в котором хранятся в двумерном массиве
-public class SquareArrayList {
+public class RectangleArrayList {
     private int[][] data;
 }
 Реализовать для него итератор.
