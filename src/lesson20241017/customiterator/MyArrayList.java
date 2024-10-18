@@ -17,6 +17,10 @@ public class MyArrayList implements Iterable<String> {
 
     @Override
     public Iterator<String> iterator() {
+        return new MyIterator();
+    }
+
+    public Iterator<String> reverseIterator() {
         return new MyReverseIterator();
     }
 
