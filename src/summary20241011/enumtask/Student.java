@@ -14,6 +14,18 @@ public class Student {
         subjects = new Subject[Subject.values().length];
     }
 
+    public Student shallowCopy() {
+        Student copy = new Student(name);
+        copy.subjects = this.subjects;
+        return copy;
+    }
+
+    public Student deepCopy() {
+        Student copy = new Student(name);
+        copy.subjects = Arrays.copyOf(subjects, subjects.length);
+        return copy;
+    }
+
 
     public void learn(Subject subject) {
         subjects[subject.ordinal()] = subject;
