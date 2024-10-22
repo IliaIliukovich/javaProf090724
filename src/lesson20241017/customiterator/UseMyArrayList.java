@@ -7,7 +7,12 @@ public class UseMyArrayList {
     public static void main(String[] args) {
         MyArrayList myArrayList = new MyArrayList(new String[] {"A", "B", "C", "D", "E"});
 
-        for (String s : myArrayList) {
+        Iterable<String> myList = new MyArrayList(new String[] {"A", "B", "C", "D", "E"});
+        Iterator<String> iterator = myList.iterator();
+        Iterator<String> iterator2 = myList.iterator();
+
+
+        for (String s : myList) {
             String element = s;
             System.out.println(element);
 
