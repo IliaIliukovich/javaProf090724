@@ -16,7 +16,21 @@ public class MyArrayList implements Iterable<String> {
 
     @Override
     public Iterator<String> iterator() {
-        return new MyIterator();
+        return new Iterator<>() {
+            private int index = 0;
+            @Override
+            public boolean hasNext() {
+                return data.length > index;
+            }
+
+            @Override
+            public String next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+                return data[index++];
+            }
+        };
     }
 
     public Iterator<String> reverseIterator() {
@@ -28,22 +42,7 @@ public class MyArrayList implements Iterable<String> {
     }
 
 
-    private class MyIterator implements Iterator<String> {
 
-        private int index = 0;
-        @Override
-        public boolean hasNext() {
-            return data.length > index;
-        }
-
-        @Override
-        public String next() {
-            if (!hasNext()) {
-                throw new NoSuchElementException();
-            }
-            return data[index++];
-        }
-    }
 
     private class MyReverseIterator implements Iterator<String> {
         private int index = data.length - 1;

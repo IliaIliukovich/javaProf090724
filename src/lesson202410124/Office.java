@@ -5,7 +5,12 @@ public class Office {
 
     public static void main(String[] args) {
 
+        int count = 10; // must be effectively final
+//        count++;
+
         JobActions manager = new JobActions() {
+
+            int managerCount = count;
             @Override
             public void doTask(Task task) {
                 System.out.println("We need to: " + task.getName());
