@@ -5,6 +5,15 @@ import java.util.List;
 
 public class Library {
     static class Book {
+
+        static class Page {
+            static class Line {
+                static class Word {
+                }
+            }
+        }
+
+
         private String bookName;
         private String autorName;
 
