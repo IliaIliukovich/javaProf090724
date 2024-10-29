@@ -1,4 +1,4 @@
-package lesson20241029;
+package lesson20241029.comparable;
 
 import summary20241025.Data;
 

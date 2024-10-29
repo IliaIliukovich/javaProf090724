@@ -1,4 +1,4 @@
-package lesson20241029;
+package lesson20241029.comparator;
 
 import java.util.Comparator;
 
