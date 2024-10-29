@@ -1,6 +1,6 @@
-package lesson202410124;
+package lesson20241024;
 
-import static lesson202410124.JobActions.Task;
+import static lesson20241024.JobActions.Task;
 public class Office {
 
     public static void main(String[] args) {

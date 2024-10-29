@@ -1,4 +1,4 @@
-package lesson202410124;
+package lesson20241024;
 
 import java.util.Iterator;
 import java.util.LinkedList;
