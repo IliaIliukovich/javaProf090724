@@ -40,6 +40,7 @@ public class SortTask {
 
     public static void bubbleSort(List<Book> books, Comparator<Book> comparator) {
         // first operation - make copy to array or ArrayList
+//        List<Book> copy = new ArrayList<>(books); // O(n) operations
         for (int i = 0; i < books.size(); i++) { // n
             boolean isSorted = true;
             for (int j = 0; j < books.size() - i - 1; j++) { // n / 2

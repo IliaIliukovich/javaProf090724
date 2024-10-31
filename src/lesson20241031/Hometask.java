@@ -12,9 +12,13 @@ public class Hometask {
         Integer key = 2;
         List<Integer> firstAndLast = findFirstAndLast(list, key);
         System.out.println(firstAndLast);
+
+        System.out.println("Library solution:");
+        System.out.println(list.indexOf(2));
+        System.out.println(list.lastIndexOf(2));
     }
 
-    private static List<Integer> findFirstAndLast(LinkedList<Integer> list, Integer key) {
+    public static List<Integer> findFirstAndLast(LinkedList<Integer> list, Integer key) {
         List<Integer> result = new ArrayList<>();
 
         int index = 0;
