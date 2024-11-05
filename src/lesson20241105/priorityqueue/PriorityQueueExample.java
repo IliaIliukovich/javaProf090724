@@ -7,7 +7,7 @@ import java.util.Queue;
 public class PriorityQueueExample {
 
     public static void main(String[] args) {
-        Queue<String> queue = new PriorityQueue<>(new Comparator<String>() {
+        Queue<String> queue = new PriorityQueue<>(5, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return o1.length() - o2.length();
