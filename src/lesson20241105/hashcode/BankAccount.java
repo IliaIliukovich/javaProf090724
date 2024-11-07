@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class BankAccount {
+public class BankAccount implements Comparable<BankAccount> {
 
     private int accountA;
 
@@ -61,5 +61,13 @@ public class BankAccount {
         bankAccountSet.add(bankAccount1);
         bankAccountSet.add(bankAccount2);
         System.out.println(bankAccountSet);
+    }
+
+    @Override
+    public int compareTo(BankAccount another) {
+        int result = accountA - another.accountA;
+        if (result == 0) result = accountB - another.accountB;
+        if (result == 0) result = Boolean.compare(isActive, another.isActive);
+        return result;
     }
 }
