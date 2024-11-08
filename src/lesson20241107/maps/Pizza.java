@@ -1,6 +1,6 @@
 package lesson20241107.maps;
 
-import java.util.List;
+import java.util.*;
 
 public class Pizza {
 
@@ -31,8 +31,23 @@ public class Pizza {
 //   a. Получить Map<String, Boolean> имя / информация, в наличии ли пицца
 //   b. Получить Map<String, Integer> повар / количество пиц, приготовленных этим поваром
 //   c. Получить Map<String, Set<String>> повар / список имен пиц, приготовленных этим поваром
+        Map<String, Set<String>> pizzasByCook = new HashMap<>();
+        for (Pizza pizza : pizzas) {
+            Set<String> pizzaSet = pizzasByCook.getOrDefault(pizza.cookName, new HashSet<>());
+            pizzaSet.add(pizza.name);
+            pizzasByCook.put(pizza.cookName, pizzaSet);
 
+//            if (!pizzasByCook.containsKey(pizza.cookName)) {
+//                Set<String> pizzaSet = new HashSet<>();
+//                pizzaSet.add(pizza.name);
+//                pizzasByCook.put(pizza.cookName, pizzaSet);
+//            } else {
+//                Set<String> pizzaSet = pizzasByCook.get(pizza.cookName);
+//                pizzaSet.add(pizza.name);
+//            }
+        }
 
+        System.out.println(pizzasByCook);
     }
 
 
