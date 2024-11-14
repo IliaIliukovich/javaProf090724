@@ -25,6 +25,7 @@ public class FunctionalInterfaceExamples {
         String delimeter = "|";
         list.forEach(element -> System.out.print(element + delimeter));
 
+        list.forEach(System.out::println);
     }
 
     public static void process() {

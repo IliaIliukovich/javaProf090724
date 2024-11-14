@@ -1,4 +1,4 @@
-package lesson20241114;
+package lesson20241114.hometask;
 
 import java.util.*;
 
