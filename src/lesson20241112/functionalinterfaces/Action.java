@@ -7,5 +7,14 @@ public interface Action {
 
 //    void doAction2(); // impossible
 
+    default void defaultMethod() {
+
+
+    }
+
+    static void staticMethod() {
+
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package lesson20241114.lamdavsanonymousclass;
+package lesson20241114.lambdavsanonymousclass;
 
 public class UseA {
 
@@ -22,7 +22,7 @@ public class UseA {
 
         A a2 = () -> { // has scope of outer method
             int counter = 0;
-//            String data = "Data from lambda class";
+//            String data = "Data from lambda class"; // impossible
             System.out.println("Method in lambda " + counter++ + " " + data);
         };
         a2.method();
