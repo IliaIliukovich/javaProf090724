@@ -1,9 +1,12 @@
-package lesson20241119;
+package lesson20241119.hometasks;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
 public class JokeSupplier {
+
+    // Создать Supplier randomJoke, который выдает пользователю случайный анекдот из заготовленного исходного списка анекдотов.
+
 
     public static void main(String[] args) {
         Supplier<String> randomJoke = () -> {
