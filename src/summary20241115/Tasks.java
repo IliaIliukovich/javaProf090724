@@ -1,7 +1,9 @@
 package summary20241115;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.Predicate;
 
 public class Tasks {
 
@@ -39,8 +41,29 @@ public class Tasks {
 
     }
 
-    public static List<String> applyFilterToList(List<String> list, Filter filter) {
-        return null; // TODO
+//    public static List<String> applyFilterToList(List<String> list, Filter filter) {
+//        List<String> result = new ArrayList<>();
+////        for (String data : list) {
+////            if (filter.apply(data)) {
+////                result.add(data);
+////            }
+////        }
+//        list.forEach(data -> {
+//            if (filter.apply(data)) {
+//                result.add(data);
+//            }
+//        });
+//        return result;
+//    }
+
+    public static List<String> applyFilterToList(List<String> list, Predicate<String> predicate) {
+        List<String> result = new ArrayList<>();
+        list.forEach(data -> {
+            if (predicate.test(data)) {
+                result.add(data);
+            }
+        });
+        return result;
     }
 
 
