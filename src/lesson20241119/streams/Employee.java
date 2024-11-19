@@ -6,4 +6,10 @@ public class Employee {
     private int age;
     private int workingHoursInMonth;
 
+    public Employee(String name, String surname, int age, int workingHoursInMonth) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.workingHoursInMonth = workingHoursInMonth;
+    }
 }

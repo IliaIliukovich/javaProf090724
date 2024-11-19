@@ -23,8 +23,8 @@ public class IntermediateOperations {
         List<Cat> catList = stringList.stream().map(s -> new Cat(s, 1)).toList();
         System.out.println(catList);
 
-        List<Character> uniniqueFirstLetters = stringList.stream().map(s -> s.toCharArray()[0]).distinct().toList();
-        System.out.println(uniniqueFirstLetters);
+        List<Character> uniqueFirstLetters = stringList.stream().map(s -> s.toCharArray()[0]).distinct().toList();
+        System.out.println(uniqueFirstLetters);
 
     }
 
