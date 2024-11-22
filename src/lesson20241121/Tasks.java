@@ -2,6 +2,7 @@ package lesson20241121;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Tasks {
 
@@ -19,24 +20,29 @@ public class Tasks {
         	System.out.println(s);
         }
 
+        strings.forEach(System.out::println);
+        strings.stream().forEach(System.out::println);
+
     }
 
     public static List<String> method(List<String> strings) {
-    	List<String> result = new ArrayList<>();
-    	for (String s : strings) {
-    		if (!result.contains(s)) {
-    			result.add(s);
-    		}
-    	}
-    	return result;
+//    	List<String> result = new ArrayList<>(); // O(n^2)
+//    	for (String s : strings) { // n
+//    		if (!result.contains(s)) { // n
+//    			result.add(s);
+//    		}
+//    	}
+    	return strings.stream().distinct().collect(Collectors.toCollection(ArrayList::new));  // O(n)
     }
 
     public static void feed(List<Cat> catList) {
-        for (int i = 0; i < catList.size(); i++) {
-            if (catList.get(i).isHungry()) {
-                catList.get(i).setHungry(false);
-            }
-        }
+//        for (int i = 0; i < catList.size(); i++) {
+//            if (catList.get(i).isHungry()) {
+//                catList.get(i).setHungry(false);
+//            }
+//        }
+        catList.stream().filter(Cat::isHungry).forEach(cat -> cat.setHungry(false)); // read -> write
+//        catList.forEach(cat -> cat.setHungry(false)); // write
     }
 
     static class Cat {

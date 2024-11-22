@@ -16,6 +16,7 @@ public class OptionalExample {
         Optional<String> optional = Optional.of("Data");
         System.out.println(optional.get()); // unsave
         System.out.println(optional.orElse("Alternative")); // save
+        System.out.println(Optional.of("Data"));
 
     }
 
