@@ -11,7 +11,7 @@ public class Paypal extends Card {
     private String secretCode;
 
     @Override
-    public int getIt() {
+    public int getId() {
         return payPalId;
     }
 

@@ -9,7 +9,7 @@ public class MasterCard extends Card {
     }
 
     @Override
-    public int getIt() {
+    public int getId() {
         return masterCardId;
     }
 

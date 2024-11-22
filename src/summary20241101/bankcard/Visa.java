@@ -8,7 +8,7 @@ public class Visa extends Card {
     }
 
     @Override
-    public int getIt() {
+    public int getId() {
         return visaId;
     }
 
