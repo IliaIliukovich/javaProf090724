@@ -1,4 +1,4 @@
-package lesson20241126;
+package lesson20241126.streams;
 
 import java.util.List;
 
