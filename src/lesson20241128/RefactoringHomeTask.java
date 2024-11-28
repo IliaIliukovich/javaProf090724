@@ -30,6 +30,7 @@ public class RefactoringHomeTask {
                 break;
             }
         }
+
         System.out.println(word);
 
 
