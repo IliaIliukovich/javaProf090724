@@ -41,30 +41,30 @@ public class Tasks {
 
     }
 
-//    public static List<String> applyFilterToList(List<String> list, Filter filter) {
-//        List<String> result = new ArrayList<>();
-////        for (String data : list) {
-////            if (filter.apply(data)) {
-////                result.add(data);
-////            }
-////        }
-//        list.forEach(data -> {
+    public static <T> List<T> applyFilterToList(List<? extends T> list, Filter<? super T> filter) {
+        List<T> result = new ArrayList<>();
+//        for (String data : list) {
 //            if (filter.apply(data)) {
 //                result.add(data);
 //            }
-//        });
-//        return result;
-//    }
-
-    public static List<String> applyFilterToList(List<String> list, Predicate<String> predicate) {
-        List<String> result = new ArrayList<>();
+//        }
         list.forEach(data -> {
-            if (predicate.test(data)) {
+            if (filter.apply(data)) {
                 result.add(data);
             }
         });
         return result;
     }
+
+//    public static <T> List<T> applyFilterToList(List<? extends T> list, Predicate<? super T> predicate) {
+//        List<T> result = new ArrayList<>();
+//        list.forEach(data -> {
+//            if (predicate.test(data)) {
+//                result.add(data);
+//            }
+//        });
+//        return result;
+//    }
 
 
 }

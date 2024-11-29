@@ -1,7 +1,7 @@
 package summary20241115;
 
-public interface Filter {
+public interface Filter<T> {
 
-    boolean apply(String data);
+    boolean apply(T data);
 
 }
