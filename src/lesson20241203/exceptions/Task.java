@@ -20,7 +20,8 @@ public class Task {
             validatePassword("12345");
             validatePassword("1234");
         } catch (WrongPasswordException e) {
-            System.out.println("Password is wrong. Try again");
+            System.out.println(e.getMessage());
+            System.out.println("Try again");
         }
 
         System.out.println("Some logic");
@@ -37,7 +38,7 @@ public class Task {
     public static void validatePassword(String password) throws WrongPasswordException{
         String correctPassword = "12345";
         if (!correctPassword.equals(password)) {
-            throw new WrongPasswordException();
+            throw new WrongPasswordException("Password is wrong");
         }
         System.out.println("Password is correct");
     }
