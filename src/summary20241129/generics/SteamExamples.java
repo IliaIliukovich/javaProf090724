@@ -1,4 +1,4 @@
-package summary20241129;
+package summary20241129.generics;
 
 import java.util.List;
 

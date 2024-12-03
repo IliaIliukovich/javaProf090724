@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class FileExamples {
 
     public static void main(String[] args) {
-        File fileOrFolder = new File("resources/file.txt");
+        File fileOrFolder = new File("resources\\file.txt");
         System.out.println(fileOrFolder.exists());
         System.out.println(fileOrFolder.isFile());
 
