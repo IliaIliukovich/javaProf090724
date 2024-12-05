@@ -13,7 +13,7 @@ public class ReadWriteObject {
         try (
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             ObjectOutputStream outputStream = new ObjectOutputStream(out);
-                ){
+            ) {
             outputStream.writeObject(person);
             byteArray = out.toByteArray();
 
