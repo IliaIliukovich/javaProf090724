@@ -13,7 +13,7 @@ public class ReadWriteObject {
         try (
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             ObjectOutputStream outputStream = new ObjectOutputStream(out);
-            ) {
+        ) {
             outputStream.writeObject(person);
             byteArray = out.toByteArray();
 
@@ -22,7 +22,6 @@ public class ReadWriteObject {
                 System.out.print((char) byteArray[i] + " ");
             }
             System.out.println();
-
 
         } catch (IOException e) {
             e.printStackTrace();

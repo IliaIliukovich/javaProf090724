@@ -6,9 +6,7 @@ public class ReadWriteBinaryData {
     public static void main(String[] args) {
 
         // Записать 3 бита '101' в файл, считать их.
-        // 0 0 0
-        // 001
-        // 010 011 100 101
+        // 000 001 010 011 100 101
 
         byte data = 0b101;
         data = 5;
@@ -32,17 +30,12 @@ public class ReadWriteBinaryData {
             for (int i = 0; i < 10; i++) {
                 System.out.println(input + " : " + Integer.toHexString(input) + " : " + (char) input);
                 input = inputStream.read();
-            } {
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 
-
     }
-
-
 
 }
