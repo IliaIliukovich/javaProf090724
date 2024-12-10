@@ -35,6 +35,7 @@ public class DateTimeExamples {
         ZonedDateTime australiaTime = zonedDateTime.withZoneSameInstant(ZoneId.of("Australia/Victoria"));
         System.out.println(australiaTime);
 
+        System.out.println(time.compareTo(LocalTime.now()));
 
     }
 
