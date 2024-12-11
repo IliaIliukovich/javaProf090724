@@ -11,13 +11,13 @@ public class ReadWriteBinaryData {
         byte data = 0b101;
         data = 5;
 
-        try (OutputStream stream = new FileOutputStream(".\\resources\\binaryFile")){
+        try (OutputStream stream = new FileOutputStream("src/main/resources/binaryFile")){
             stream.write(data);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try (InputStream inputStream = new FileInputStream(".\\resources\\binaryFile")){
+        try (InputStream inputStream = new FileInputStream("src/main/resources/binaryFile")){
             int input = inputStream.read();
             System.out.println(input);
         } catch (IOException e) {
@@ -25,7 +25,7 @@ public class ReadWriteBinaryData {
         }
 
         // Kitten image:
-        try (InputStream inputStream = new FileInputStream(".\\resources\\kitten.png")){
+        try (InputStream inputStream = new FileInputStream("src/main/resources/kitten.png")){
             int input = inputStream.read();
             for (int i = 0; i < 10; i++) {
                 System.out.println(input + " : " + Integer.toHexString(input) + " : " + (char) input);

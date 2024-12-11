@@ -18,7 +18,7 @@ public class Hometasks {
     }
 
     public static void logToFile(MyAppException e) {
-        try (PrintWriter pr = new PrintWriter(new FileWriter("./resources/errors.log", true))){
+        try (PrintWriter pr = new PrintWriter(new FileWriter("src/main/resources/errors.log", true))){
             pr.print(new Date() + " :" );
             e.printStackTrace(pr);
         } catch (IOException ignore) {

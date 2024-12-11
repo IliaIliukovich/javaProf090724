@@ -6,11 +6,11 @@ import java.util.Arrays;
 public class FileExamples {
 
     public static void main(String[] args) {
-        File fileOrFolder = new File("resources\\file.txt");
+        File fileOrFolder = new File("src/main/resources/file.txt");
         System.out.println(fileOrFolder.exists());
         System.out.println(fileOrFolder.isFile());
 
-        fileOrFolder = new File("resources/newFolder");
+        fileOrFolder = new File("src/main/resources/newFolder");
         fileOrFolder.mkdir();
         System.out.println(fileOrFolder.exists());
         String[] listed = fileOrFolder.list();

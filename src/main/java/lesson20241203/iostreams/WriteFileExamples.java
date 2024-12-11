@@ -5,7 +5,7 @@ import java.io.*;
 public class WriteFileExamples {
 
     public static void main(String[] args) {
-        File file = new File("resources/file.txt");
+        File file = new File("src/main/resources/file.txt");
         System.out.println(file.exists());
 
 //        try {

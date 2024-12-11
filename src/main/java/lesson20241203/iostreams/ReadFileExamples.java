@@ -46,7 +46,7 @@ public class ReadFileExamples {
 //        }
 
         try (
-            Scanner scanner = new Scanner(new File("resources/file.txt"));
+            Scanner scanner = new Scanner(new File("src/main/resources/file.txt"));
         ) {
            while (scanner.hasNext()) {
                System.out.println(scanner.nextLine());
