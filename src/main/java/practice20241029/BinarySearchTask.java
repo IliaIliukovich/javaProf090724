@@ -25,7 +25,7 @@ public class BinarySearchTask {
         int startIndex = 0;
         int endIndex = list.size() - 1;
         while (startIndex <= endIndex) { // log (n)
-            int middleIndex =startIndex + (endIndex - startIndex) / 2;
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
             if (key.compareTo(list.get(middleIndex)) > 0){
                 startIndex = middleIndex + 1;
             } else if (key.compareTo(list.get(middleIndex)) < 0) {
