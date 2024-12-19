@@ -9,6 +9,10 @@ public class RaceCondition {
         new Thread(() -> {
             for (int i = 0; i < 10; i++) {
                 System.out.println(counter++);
+//                int tmp = counter;
+//                tmp++;
+//                counter = tmp;
+
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
