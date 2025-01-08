@@ -1,4 +1,4 @@
-package lesson20250107;
+package lesson20250107.waitnotify;
 
 public class WaitNotifyExample {
 

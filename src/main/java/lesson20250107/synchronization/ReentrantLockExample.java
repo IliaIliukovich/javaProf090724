@@ -1,4 +1,4 @@
-package lesson20250107;
+package lesson20250107.synchronization;
 
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -47,7 +47,7 @@ public class ReentrantLockExample {
 //        count++;
 //    }
 
-        private static void increment() {
+    private static void increment() {
         lock.lock();
         try {
             count++;

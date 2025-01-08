@@ -1,4 +1,4 @@
-package lesson20250107;
+package lesson20250107.synchronization;
 
 import java.util.concurrent.locks.ReentrantLock;
 
