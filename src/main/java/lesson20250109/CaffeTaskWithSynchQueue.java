@@ -3,6 +3,7 @@ package lesson20250109;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.SynchronousQueue;
 
 public class CaffeTaskWithSynchQueue {
@@ -20,6 +21,7 @@ public class CaffeTaskWithSynchQueue {
 
     static BlockingQueue<String> orderQueue = new SynchronousQueue<>(true);
     static BlockingQueue<String> cookedDishesQueue = new SynchronousQueue<>(true);
+    static Semaphore semaphore = new Semaphore(3, true);
 
     public static void main(String[] args) {
         new Thread(new ChefCook(), "Cook").start();
@@ -55,6 +57,8 @@ public class CaffeTaskWithSynchQueue {
         @Override
         public void run() {
            try {
+                System.out.println(Thread.currentThread().getName() + " comes to cafe");
+                semaphore.acquire();
                 System.out.println(Thread.currentThread().getName() + " enters cafe");
                 System.out.println(Thread.currentThread().getName() + " makes order");
                 orderQueue.put(meal);
@@ -63,6 +67,7 @@ public class CaffeTaskWithSynchQueue {
                 System.out.println(Thread.currentThread().getName() + " enjoys " + cookedMeal);
                 Thread.sleep(5000);
                 System.out.println(Thread.currentThread().getName() + " leaves cafe");
+                semaphore.release();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
