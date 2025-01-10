@@ -1,0 +1,14 @@
+String data = "common value";    || do nothing / volatile / synchronized / ReentrantLock / atomic
+
+
+thread1 - read // do nothing
+thread2 - read
+
+thread1 - read // do nothing / volatile
+thread2 - write
+
+thread1 - write ---> data = "data 1" // do nothing / volatile
+thread2 - write ---> data = "data 2"
+
+thread1 - write ---> data = data + " new logs" // synchronized / ReentrantLock / atomic
+thread2 - write ---> data = data + " new logs2"
