@@ -33,7 +33,7 @@ public class AtomicBankAccount {
         new Thread(() -> {
             while (true) {
                 int result = account.addAndGet(10);
-//                account.addAndGet(10); // two call together not atomic ----> not thread safe
+//                account.addAndGet(10); // two calls together are not atomic ----> not thread safe
                 System.out.println(result);
                 try {
                     Thread.sleep(1000);
