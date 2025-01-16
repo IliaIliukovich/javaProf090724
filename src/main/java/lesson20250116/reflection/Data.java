@@ -1,9 +1,12 @@
-package lesson20250116;
+package lesson20250116.reflection;
 
 public class Data {
 
-    private final String name;
+    private String name;
     private int count;
+
+    public Data() {
+    }
 
     public Data(String name, int count) {
         this.name = name;

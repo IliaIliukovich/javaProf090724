@@ -1,4 +1,4 @@
-package lesson20250116;
+package lesson20250116.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -33,12 +33,14 @@ public class UseData {
         method2.setAccessible(true);
         method2.invoke(data, "input string");
 
-        Class<?> forName = Class.forName("lesson20250116.Data");
-//        forName.newInstance(); // deprecated - not safe
+        Class<?> forName = Class.forName("lesson20250116.reflection.Data");
+
+        @SuppressWarnings("deprecation")
+        Object newInstance = forName.newInstance();// deprecated - not safe
+
         Constructor<?> constructor = forName.getConstructor(String.class, int.class);
         Data iphone = (Data) constructor.newInstance("Iphone", 5);
         System.out.println(iphone);
-
 
 //        System.out.println(Arrays.toString(new int[]{1, 2, 3}));
     }
