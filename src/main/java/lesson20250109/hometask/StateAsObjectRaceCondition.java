@@ -24,8 +24,12 @@ public class StateAsObjectRaceCondition {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            int accountA = account.getAccountA();
-            int accountB = account.getAccountB();
+            int accountA;
+            int accountB;
+//            synchronized (accountManager) {
+                accountA = account.getAccountA();
+                accountB = account.getAccountB();
+//            }
             int balance = accountA + accountB;
             System.out.println("accountA: " + accountA + ", accountB: " + accountB + ", total balance: " + balance);
         }

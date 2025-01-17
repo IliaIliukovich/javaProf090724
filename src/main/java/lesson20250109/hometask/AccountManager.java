@@ -19,6 +19,6 @@ public class AccountManager {
     }
 
     public synchronized BankAccount getBankAccount() {
-            return bankAccount;
+            return new BankAccount(bankAccount.getAccountA(), bankAccount.getAccountB()); // make copy
     }
 }

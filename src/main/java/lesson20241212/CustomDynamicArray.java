@@ -20,14 +20,14 @@ public class CustomDynamicArray implements Iterable<Integer> {
         this.size = size;
     }
 
-    public void add(int element){ // O(1) amortized,  O(n) - worst case
+    public synchronized void add(int element){ // O(1) amortized,  O(n) - worst case
         if (count == size){
             growSize();
         }
         data[count++] = element;
     }
 
-    public void addAt(int index, int element){ // O(n)
+    public synchronized void addAt(int index, int element){ // O(n)
         if (index < 0 || index >= count) throw new RuntimeException("Index is out of bounds");
         if (count == size){
             growSize();
@@ -48,7 +48,7 @@ public class CustomDynamicArray implements Iterable<Integer> {
         size = size * 2;
     }
 
-    public void shrinkSize(){ // O(n)
+    public synchronized void shrinkSize(){ // O(n)
         if (count < size){
             Integer[] newArray = new Integer[count];
             for (int i = 0; i < count; i++) {
@@ -59,11 +59,11 @@ public class CustomDynamicArray implements Iterable<Integer> {
         }
     }
 
-    public void remove(){ // O(1)
+    public synchronized void remove(){ // O(1)
         data[--count] = null; // make link to object null for GC
     }
 
-    public void removeAt(int index){ // O(n)
+    public synchronized void removeAt(int index){ // O(n)
         if (index < 0 || index >= count) throw new RuntimeException("Index is out of bounds");
 
         for (int i = index; i < count; i++) {
@@ -72,35 +72,35 @@ public class CustomDynamicArray implements Iterable<Integer> {
         data[--count] = null;
     }
 
-    public void set(int index, int element){ // O(1)
+    public synchronized void set(int index, int element){ // O(1)
         if (index < 0 || index >= count) throw new RuntimeException("Index is out of bounds");
         data[index] = element;
     }
 
-    public int get(int index){ // O(1)
+    public synchronized int get(int index){ // O(1)
         if (index < 0 || index >= count) throw new RuntimeException("Index is out of bounds");
         return data[index];
     }
 
-    public void clear(){ // O(1)
+    public synchronized void clear(){ // O(1)
         data = new Integer[0];
         size = 1;
         count = 0;
     }
 
-    public int contains(int element){ // O(n)
+    public synchronized int contains(int element){ // O(n)
         for (int i = 0; i < count; i++) {
             if (data[i] == element) return i;
         }
         return -1;
     }
 
-    public boolean isEmpty(){ // O(1)
+    public synchronized boolean isEmpty(){ // O(1)
         return count == 0;
     }
 
     @Override
-    public String toString() {
+    public synchronized String toString() {
         StringBuilder result = new StringBuilder("CustomDynamicArray[");
         for (int i = 0; i < count; i++) {
             result.append(data[i]).append(", ");
@@ -110,17 +110,21 @@ public class CustomDynamicArray implements Iterable<Integer> {
     }
 
     @Override
-    public Iterator<Integer> iterator() {
+    public synchronized Iterator<Integer> iterator() {
         return new Iterator<>() {
             int currentIndex = 0;
             @Override
             public boolean hasNext() {
-                return currentIndex < count;
+                synchronized (CustomDynamicArray.this) {
+                    return currentIndex < count;
+                }
             }
             @Override
             public Integer next() {
-                if (!hasNext()) throw new RuntimeException("No elements present");
-                return data[currentIndex++];
+                synchronized (CustomDynamicArray.this) {
+                    if (!hasNext()) throw new RuntimeException("No elements present");
+                    return data[currentIndex++];
+                }
             }
         };
     }
