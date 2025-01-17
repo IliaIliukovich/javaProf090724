@@ -1,5 +1,7 @@
 package lesson20250114;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.LongStream;
@@ -29,6 +31,8 @@ public class StreamParallelComputations {
         integers.parallelStream(); // uneffective for LinkedList
         
         // effective for arrays, ArrayList, HashMap, HashSet
+
+//        Arrays.parallelSort();
     }
 
 }
