@@ -34,6 +34,9 @@ public class Mechanic {
 
         mechanic.service(car1);
         mechanic.service(car2);
+
+        Car car3 = new TelsaModification();
+        mechanic.service(car3); // Liskov substitution principle violation
     }
 
 
