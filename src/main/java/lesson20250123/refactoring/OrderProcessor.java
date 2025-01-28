@@ -1,9 +1,6 @@
 package lesson20250123.refactoring;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class OrderProcessor {
@@ -66,7 +63,7 @@ public class OrderProcessor {
                 logMessage("Item not found: " + id);
                 return null;
             }
-        }).collect(Collectors.toCollection(ArrayList::new));
+        }).filter(Objects::nonNull).collect(Collectors.toCollection(ArrayList::new));
     }
 
     public void cancelOrder(long orderId) {
