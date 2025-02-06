@@ -1,4 +1,4 @@
-package lesson20250123;
+package lesson20250206;
 
 import java.sql.*;
 
