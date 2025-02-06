@@ -79,12 +79,13 @@ public class CityDao implements WorldDAO<City, Integer> {
     }
 
     @Override
-    public City update(City data) {
+    public City update(City data) { // TODO
+        // update -----> select
         return null;
     }
 
     @Override
-    public void delete(Integer integer) {
+    public void delete(Integer integer) { // TODO
 
     }
 }
