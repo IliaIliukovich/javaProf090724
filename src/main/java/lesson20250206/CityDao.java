@@ -25,7 +25,7 @@ public class CityDao implements WorldDAO<City, Integer> {
             ResultSet resultSet = statement.executeQuery(GET_ALL);
             List<City> cities = new ArrayList<>();
             while (resultSet.next()){
-                City city = getCityfromResultSet(resultSet);
+                City city = getCityFromResultSet(resultSet);
                 cities.add(city);
             }
             return cities;
@@ -35,7 +35,7 @@ public class CityDao implements WorldDAO<City, Integer> {
         return null;
     }
 
-    private City getCityfromResultSet(ResultSet resultSet) throws SQLException {
+    private City getCityFromResultSet(ResultSet resultSet) throws SQLException {
         int id = resultSet.getInt("ID");
         String name = resultSet.getString("Name");
         String countryCode = resultSet.getString("CountryCode");
@@ -53,7 +53,7 @@ public class CityDao implements WorldDAO<City, Integer> {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                City city = getCityfromResultSet(resultSet);
+                City city = getCityFromResultSet(resultSet);
                 return Optional.of(city);
             }
         } catch (SQLException e) {
@@ -85,7 +85,7 @@ public class CityDao implements WorldDAO<City, Integer> {
     }
 
     @Override
-    public void delete(Integer integer) { // TODO
+    public void delete(Integer id) { // TODO
 
     }
 }
